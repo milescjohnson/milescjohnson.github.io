@@ -1,1 +1,17 @@
+title: "Miles Johnson – Technical Writing Portfolio"
+theme: jekyll-theme-minimal
+
+markdown: kramdown
+plugins:
+  - jekyll-seo-tag
+
+nav:
+  - Home: index.md
+  - About: about.md
+  - Portfolio:
+      - API Reference: portfolio/api-reference/index.md
+      - How-To Guide: portfolio/how-to-guide/index.md
+      - System Design Doc: portfolio/system-design-doc/index.md
+      - Troubleshooting Guide: portfolio/troubleshooting-guide/index.md
+      - Gameplay System Doc: portfolio/gameplay-system-doc/index.md
 
