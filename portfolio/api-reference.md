@@ -77,12 +77,18 @@ progressed.
 <div class="mermaid">
 stateDiagram-v2
     [*] --> REQUESTED : AllocateServer
+
     REQUESTED --> PROVISIONING : Worker dequeues request
     PROVISIONING --> ACTIVE : Server initialized successfully
+
     PROVISIONING --> FAILED : Provisioning error
+    PROVISIONING --> FAILED : Timeout exceeded
+
     ACTIVE --> DEALLOCATING : DeallocateServer
     DEALLOCATING --> DEALLOCATED : Resources released
+
     FAILED --> DEALLOCATED : Cleanup completed
+
     DEALLOCATED --> [*]
 </div>
 
