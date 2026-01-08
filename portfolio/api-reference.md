@@ -74,7 +74,7 @@ progressed.
 
 ## Lifecycle Diagram
 
-<div class="mermaid">
+```mermaid
 stateDiagram-v2
     [*] --> REQUESTED : AllocateServer
 
@@ -90,7 +90,7 @@ stateDiagram-v2
     FAILED --> DEALLOCATED : Cleanup completed
 
     DEALLOCATED --> [*]
-</div>
+```
 
 The DSM lifecycle is driven by asynchronous background workers. Client-facing API
 calls record desired state, while workers reconcile that desired state with actual
