@@ -74,23 +74,22 @@ progressed.
 
 ## Lifecycle Diagram
 
-```mermaid
+<div class="mermaid">
 stateDiagram-v2
     [*] --> REQUESTED : AllocateServer
-
     REQUESTED --> PROVISIONING : Worker dequeues request
     PROVISIONING --> ACTIVE : Server initialized successfully
-
     PROVISIONING --> FAILED : Provisioning error
-    PROVISIONING --> FAILED : Timeout exceeded
-
     ACTIVE --> DEALLOCATING : DeallocateServer
     DEALLOCATING --> DEALLOCATED : Resources released
-
     FAILED --> DEALLOCATED : Cleanup completed
-
     DEALLOCATED --> [*]
-```
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script>
+mermaid.initialize({ startOnLoad:true });
+</script>
 
 The DSM lifecycle is driven by asynchronous background workers. Client-facing API
 calls record desired state, while workers reconcile that desired state with actual
