@@ -13,9 +13,8 @@ This portfolio highlights sample projects that demonstrate my ability to write:
 
 ## Portfolio
 
-- [API Reference](portfolio/api-reference/)
-- [How-To Guide](portfolio/how-to-guide/)
-- [System Design Document](portfolio/system-design-doc/)
-- [Troubleshooting Guide](portfolio/troubleshooting-guide/)
-- [Gameplay System Documentation](portfolio/gameplay-system-doc/)
+- [API Reference](portfolio/api-reference)
+- [How-To Guide](portfolio/how-to-guide)
+- [System Design Document](portfolio/system-design-doc)
+- [Troubleshooting Guide](portfolio/troubleshooting-guide)
 
