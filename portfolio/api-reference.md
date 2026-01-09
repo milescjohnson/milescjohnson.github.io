@@ -67,9 +67,6 @@ Server instances managed by DSM progress through a defined set of states.
 | `DEALLOCATED` | Server resources have been released |
 | `FAILED` | Provisioning failed or timed out |
 
-State transitions are monotonic; servers do not return to earlier states once
-progressed.
-
 ---
 
 ## Lifecycle Diagram
@@ -96,10 +93,6 @@ stateDiagram-v2
 <script>
 mermaid.initialize({ startOnLoad:true });
 </script>
-
-The DSM lifecycle is driven by asynchronous background workers. Client-facing API
-calls record desired state, while workers reconcile that desired state with actual
-infrastructure state. Clients observe state transitions via polling.
 
 ---
 
