@@ -1,6 +1,5 @@
 # DedicatedServerManager (DSM) API
 
-> [!NOTE]
 > # Intended Audience
 > 
 >   **This document is intended for internal engineers integrating with the DedicatedServerManager service, including:**
@@ -15,13 +14,12 @@
 >
 > # Scope
 >
-> **This documentation covers:**
+>   **This documentation covers:**
 > - The purpose and responsibilities of the DedicatedServerManager service
 > - The lifecycle model for dedicated server instances
 > - Public API endpoints, request/response formats, and expected behaviors
 > - Asynchronous allocation semantics, including polling and idempotency guarantees
-> 
-> - **This documentation intentionally excludes:**
+>   **This documentation intentionally excludes:**
 > - Internal datastore schemas and queue implementations
 > - Third-party hosting provider configuration details
 > - Operational procedures such as deployment, scaling, or alerting
