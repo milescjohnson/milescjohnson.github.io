@@ -1,15 +1,8 @@
 # Miles Johnson — Technical Writing Portfolio
 
-Welcome! I’m a technical writer and former software engineer with 10 years of experience creating 
-clear, accessible documentation for engineers, designers, and technical stakeholders.
+Over the course of 10 years as a backend engineer I have written, and read, a lot of technical documents. I have learned to appreciate how powerful great documentation is, and how miserable it is working with poor documentation. I take pride in creating clear, accessible, and useful resources for both technical and non-technical audiences.
 
-This portfolio highlights sample projects that demonstrate my ability to write:
-
-- API references  
-- How-to guides  
-- Technical design documents  
-- Troubleshooting guides  
-- System architecture explanations  
+Here are a few sample projects to demonstrate documentation style and skills:  
 
 ## Portfolio
 
