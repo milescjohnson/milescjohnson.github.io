@@ -2,12 +2,12 @@
 
 > # Intended Audience
 > 
->   **This document is intended for internal engineers integrating with the DedicatedServerManager service, including:**
+> **This document is intended for internal engineers integrating with the DedicatedServerManager service, including:**
 > - Backend engineers responsible for session orchestration or matchmaking
 > - Platform engineers operating services that depend on ephemeral compute resources
 > - DevOps or SRE teams monitoring server lifecycle behavior
 >
->   **Readers are expected to be familiar with:**
+> **Readers are expected to be familiar with:**
 > - HTTP-based service APIs
 > - Asynchronous workflows and eventual consistency
 > - Distributed systems concepts such as background workers and task queues
@@ -15,13 +15,13 @@
 >
 > # Scope
 >
->   **This documentation covers:**
+> **This documentation covers:**
 > - The purpose and responsibilities of the DedicatedServerManager service
 > - The lifecycle model for dedicated server instances
 > - Public API endpoints, request/response formats, and expected behaviors
 > - Asynchronous allocation semantics, including polling and idempotency guarantees
 >
->   **This documentation intentionally excludes:**
+> **This documentation intentionally excludes:**
 > - Internal datastore schemas and queue implementations
 > - Third-party hosting provider configuration details
 > - Operational procedures such as deployment, scaling, or alerting
