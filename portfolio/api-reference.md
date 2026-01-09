@@ -86,7 +86,6 @@ Server instances managed by DSM progress through a defined set of states.
 | `DEALLOCATING` | Server shutdown has been requested |
 | `DEALLOCATED` | Server resources have been released |
 | `FAILED` | Provisioning failed or timed out |
-
 ---
 
 ## Lifecycle Diagram
