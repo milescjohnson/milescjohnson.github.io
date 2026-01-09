@@ -20,7 +20,7 @@
 > - The lifecycle model for dedicated server instances
 > - Public API endpoints, request/response formats, and expected behaviors
 > - Asynchronous allocation semantics, including polling and idempotency guarantees
->
+>   
 >   **This documentation intentionally excludes:**
 > - Internal datastore schemas and queue implementations
 > - Third-party hosting provider configuration details
