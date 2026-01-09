@@ -1,19 +1,18 @@
 # DedicatedServerManager (DSM) API
 
-> # Intended Audience
+> ### Intended Audience
 > 
 > **This document is intended for internal engineers integrating with the DedicatedServerManager service, including:**
 > - Backend engineers responsible for session orchestration or matchmaking
 > - Platform engineers operating services that depend on ephemeral compute resources
 > - DevOps or SRE teams monitoring server lifecycle behavior
->
 > **Readers are expected to be familiar with:**
 > - HTTP-based service APIs
 > - Asynchronous workflows and eventual consistency
 > - Distributed systems concepts such as background workers and task queues
 > This document does not assume prior knowledge of DSM’s internal implementation or the underlying hosting provider.
 >
-> # Scope
+> ### Scope
 >
 > **This documentation covers:**
 > - The purpose and responsibilities of the DedicatedServerManager service
