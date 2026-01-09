@@ -1,6 +1,6 @@
 # DedicatedServerManager (DSM) API
 
-> ##Intended Audience
+> ## Intended Audience
 > 
 >   **This document is intended for internal engineers integrating with the DedicatedServerManager service, including:**
 > - Backend engineers responsible for session orchestration or matchmaking
@@ -14,7 +14,7 @@
 
 ---
 
-> ##Scope
+> ## Scope
 >
 > **This documentation covers:**
 > - The purpose and responsibilities of the DedicatedServerManager service
