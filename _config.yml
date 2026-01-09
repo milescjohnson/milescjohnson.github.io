@@ -1,5 +1,5 @@
 title: "Miles Johnson – Technical Writing Portfolio"
-theme: jekyll-theme-modernist
+theme: jekyll-theme-minimal
 
 markdown: kramdown
 plugins:
