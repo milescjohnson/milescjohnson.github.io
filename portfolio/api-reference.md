@@ -6,7 +6,7 @@
 > - Backend engineers responsible for session orchestration or matchmaking
 > - Platform engineers operating services that depend on ephemeral compute resources
 > - DevOps or SRE teams monitoring server lifecycle behavior
-> 
+>
 >   **Readers are expected to be familiar with:**
 > - HTTP-based service APIs
 > - Asynchronous workflows and eventual consistency
@@ -20,7 +20,7 @@
 > - The lifecycle model for dedicated server instances
 > - Public API endpoints, request/response formats, and expected behaviors
 > - Asynchronous allocation semantics, including polling and idempotency guarantees
->   
+>
 >   **This documentation intentionally excludes:**
 > - Internal datastore schemas and queue implementations
 > - Third-party hosting provider configuration details
