@@ -6,7 +6,7 @@
 > - HTTP-based service APIs
 > - Asynchronous workflows and eventual consistency
 > - Distributed systems concepts such as background workers and task queues
-> 
+>
 > This document does not assume prior knowledge of DSM’s internal implementation or the underlying hosting provider.
 >
 > ## Scope
