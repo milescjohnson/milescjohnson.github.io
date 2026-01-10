@@ -51,7 +51,9 @@ This command performs various housekeeping tasks to configure your project for l
 
 ## Run and test a service API
 
-Most services rely on applications like Redis for caching or Postgres for data to function properly. You'll need to [Download Docker](https://docs.docker.com/desktop/) for this. Docker containers 
+Each service relies on various applications like Redis for caching or Postgres for data to function properly. With [Docker containers](https://docs.docker.com/) you can conveniently host all the applications you need locally in a way that is a way that is identical to our Kubernetes pods in production.
+
+[Install Docker](https://docs.docker.com/desktop/)
 
 Now you can try running a service.
 
