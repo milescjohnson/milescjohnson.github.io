@@ -9,6 +9,8 @@ In this guide you will learn how to set up your local environment for developing
 **Birdleaf Repository**
 
 First you'll need to clone the GitHub repository onto your machine.
-`git clone https://github.com/milescjohnson/birdleaf.git`
+```bash
+  git clone https://github.com/milescjohnson/birdleaf.git
+```
 
 
