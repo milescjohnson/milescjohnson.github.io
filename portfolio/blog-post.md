@@ -91,6 +91,7 @@ We now have data suggesting some variants perform better than others. We slightl
 
 
 ### Outcomes
+
 | Subject | Opens | Attempts | Open Rate |
 |-------|------|----------|-----------|
 | A | 1 | 4 | 25% |
