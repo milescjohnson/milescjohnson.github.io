@@ -94,17 +94,16 @@ We now have data suggesting some variants perform better than others. We slightl
 
 | Subject | Opens | Attempts | Open Rate |
 |-------|------|----------|-----------|
-| A | 1 | 4 | 25% |
-| B | 0 | 3 | 0% |
-| C | 2 | 6 | 33% |
-| D | 1 | 4 | 25% |
-| E | 0 | 3 | 0% |
-| F | 1 | 4 | 25% |
-| G | 5 | 9 | 56% |
-| H | 1 | 4 | 25% |
-| I | 0 | 3 | 0% |
-| J | 6 | 10 | 60% |
-
+| A | 1 | 5 | 25% |
+| B | 0 | 5 | 0% |
+| C | 2 | 5 | 33% |
+| D | 1 | 5 | 25% |
+| E | 0 | 5 | 0% |
+| F | 1 | 5 | 25% |
+| G | 3 | 5 | 56% |
+| H | 1 | 5 | 25% |
+| I | 0 | 5 | 0% |
+| J | 2 | 5 | 60% |
 
 
 ## Batch 3 — Exploitation Begins
