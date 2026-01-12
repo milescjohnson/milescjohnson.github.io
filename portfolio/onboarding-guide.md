@@ -62,15 +62,15 @@ Each service relies on various applications like Redis for caching or Postgres f
 
 Each service has a `docker-compose.yaml` file located at `<service>/dev/local/docker/docker-compose.yaml`. This file configures all of the docker images your service needs. For example, if your service needs Redis and has `REDIS_PORT: 4444` defined in `appsettings.json`, the `docker-compose.yaml` file will have instructions to start a Redis container listening on port `4444` as well.
 
-	```
-    docker compose -f <service>/dev/local/docker/docker-compose.yaml up
-    ```
+  ```
+  docker compose -f <service>/dev/local/docker/docker-compose.yaml up
+  ```
 
 When you are finished, shut down with:
 
-	```
-	docker compose down
-	```
+  ```
+  docker compose down
+  ```
 
 Now you can try running a service.
 
