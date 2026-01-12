@@ -36,6 +36,7 @@ when optimizing open rates across 10 email subject lines using batches of 50 rec
 We have no prior knowledge of the performance of any of the subject lines, so we distribute them equally.
 
 ### Allocation
+
 | Subject | Recipients |
 |-------|------------|
 | A | 5 |
@@ -51,6 +52,7 @@ We have no prior knowledge of the performance of any of the subject lines, so we
 | **Total** | **50** |
 
 ### Outcomes
+
 | Subject | Opens | Attempts | Open Rate |
 |-------|------|----------|-----------|
 | A | 1 | 5 | 20% |
@@ -71,6 +73,7 @@ We have no prior knowledge of the performance of any of the subject lines, so we
 We now have data suggesting some variants perform better than others. We slightly adjust the distribution in favor of the winners without overcommiting due to low confidence.
 
 ### Allocation
+
 | Subject | Recipients |
 |-------|------------|
 | A | 4 |
@@ -106,6 +109,7 @@ We now have data suggesting some variants perform better than others. We slightl
 As confidence grows, we can weight the distribution further in favor of higher performing variants while still exploring. Weights for future iterations are still influence by performance of both dominant and non-dominant variants.
 
 ### Allocation
+
 | Subject | Recipients |
 |-------|------------|
 | A | 3 |
@@ -121,6 +125,7 @@ As confidence grows, we can weight the distribution further in favor of higher p
 | **Total** | **50** |
 
 ### Outcomes
+
 | Subject | Opens | Attempts | Open Rate |
 |-------|------|----------|-----------|
 | A | 0 | 3 | 0% |
@@ -141,6 +146,7 @@ As confidence grows, we can weight the distribution further in favor of higher p
 As confidence increases and dominant variants emerge, the distribution begins to converge in favor of them.
 
 ### Allocation
+
 | Subject | Recipients |
 |-------|------------|
 | A | 2 |
@@ -156,6 +162,7 @@ As confidence increases and dominant variants emerge, the distribution begins to
 | **Total** | **50** |
 
 ### Outcomes
+
 | Subject | Opens | Attempts | Open Rate |
 |-------|------|----------|-----------|
 | A | 0 | 2 | 0% |
@@ -176,6 +183,7 @@ As confidence increases and dominant variants emerge, the distribution begins to
 Eventually, we get a near convergent distribution of dominant variants. Depending on the remaining iterations we can parameterize the algorithm to continue exploration of weak performers or converge entirely on the winners.
 
 ### Allocation
+
 | Subject | Recipients |
 |-------|------------|
 | A | 1 |
@@ -191,6 +199,7 @@ Eventually, we get a near convergent distribution of dominant variants. Dependin
 | **Total** | **50** |
 
 ### Outcomes
+
 | Subject | Opens | Attempts | Open Rate |
 |-------|------|----------|-----------|
 | A | 0 | 1 | 0% |
