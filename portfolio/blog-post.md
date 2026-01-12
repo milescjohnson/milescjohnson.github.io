@@ -51,6 +51,7 @@ We have no prior knowledge of the performance of any of the subject lines, so we
 | J | 5 |
 | **Total** | **50** |
 
+
 ### Outcomes
 
 | Subject | Opens | Attempts | Open Rate |
@@ -66,7 +67,7 @@ We have no prior knowledge of the performance of any of the subject lines, so we
 | I | 0 | 5 | 0% |
 | J | 2 | 5 | 40% |
 
----
+
 
 ## Batch 2 — Light Bias Toward Early Winners
 
@@ -88,6 +89,7 @@ We now have data suggesting some variants perform better than others. We slightl
 | J | 10 |
 | **Total** | **50** |
 
+
 ### Outcomes
 | Subject | Opens | Attempts | Open Rate |
 |-------|------|----------|-----------|
@@ -102,7 +104,7 @@ We now have data suggesting some variants perform better than others. We slightl
 | I | 0 | 3 | 0% |
 | J | 6 | 10 | 60% |
 
----
+
 
 ## Batch 3 — Exploitation Begins
 
@@ -124,6 +126,7 @@ As confidence grows, we can weight the distribution further in favor of higher p
 | J | 17 |
 | **Total** | **50** |
 
+
 ### Outcomes
 
 | Subject | Opens | Attempts | Open Rate |
@@ -139,7 +142,7 @@ As confidence grows, we can weight the distribution further in favor of higher p
 | I | 0 | 2 | 0% |
 | J | 11 | 17 | 65% |
 
----
+
 
 ## Batch 4 — Dominant Variants Emerging
 
@@ -161,6 +164,7 @@ As confidence increases and dominant variants emerge, the distribution begins to
 | J | 22 |
 | **Total** | **50** |
 
+
 ### Outcomes
 
 | Subject | Opens | Attempts | Open Rate |
@@ -176,7 +180,7 @@ As confidence increases and dominant variants emerge, the distribution begins to
 | I | 0 | 1 | 0% |
 | J | 15 | 22 | 68% |
 
----
+
 
 ## Batch 5 — Near-Convergence Behavior
 
@@ -197,6 +201,7 @@ Eventually, we get a near convergent distribution of dominant variants. Dependin
 | I | 1 |
 | J | 24 |
 | **Total** | **50** |
+
 
 ### Outcomes
 
