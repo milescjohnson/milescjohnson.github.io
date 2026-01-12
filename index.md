@@ -9,7 +9,7 @@ Here are a few sample projects to demonstrate documentation style and skills:
 Shortly after I joined 1047 Games, they announced internally that we would begin working on a sequel to their flagship game. I was part of a handful of engineers tasked with breaking ground on a brand new backend platform for the new game. In additon to developing the foundational systems and services of the new backend, we were responsible for writing knowledgebase articles, design documents, and API references for everything we built. While these documents are not publicly available, I have created a few samples to represent the kinds of documents I would write for internal engineering teams.
 
 - [Dedicated Server Manager Spec](portfolio/api-reference)
-- [Getting Started With the Product Platform](portfolio/how-to-guide)
+- [Getting Started With the Product Platform](portfolio/onboarding-guide)
 
 ## Knowhere
 
