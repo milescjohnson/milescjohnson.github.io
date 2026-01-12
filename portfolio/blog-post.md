@@ -26,7 +26,7 @@ Thompson Sampling is an algorithm that balances known prior probability with exp
 To better understand howthe algorithm might approach optimizing subject line open rates, here are some tables representing the first few iterations of the algorithm. In this example, we assume 1000 recipients, 10 subject lines to test, and a batch size of 50 recipients.
 
 
-# Thompson Sampling Example: Email Subject Line Optimization
+## Thompson Sampling Example: Email Subject Line Optimization
 
 This document visualizes how Thompson Sampling might allocate traffic and observe outcomes
 when optimizing open rates across 10 email subject lines using batches of 50 recipients.
@@ -203,3 +203,10 @@ Eventually, we get a near convergent distribution of dominant variants. Dependin
 | H | 0 | 1 | 0% |
 | I | 0 | 1 | 0% |
 | J | 17 | 24 | 71% |
+
+---
+
+## Conclusion
+
+By leveraging user timezones, we can begin a batch-delivery process every morning starting with smaller cohorts on the East Coast, and use Thompson Sampling to iterate on open rate data from early readers to converge on optimal subject lines throughout the day. This ensures that all readers receive their newsletter in a timely manner in the morning, while also maximizing the performance of our emails.
+
