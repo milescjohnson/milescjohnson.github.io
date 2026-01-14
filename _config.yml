@@ -1,5 +1,5 @@
 # Site settings
-title: Miles Johnson2
+title: Miles Johnson - Technical Writing Portfolio
 url: "https://milescjohnson.github.io"
 baseurl: "" # leave empty for user/organization pages
 
@@ -22,11 +22,18 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
-# Navigation (used by many themes)
-header_pages:
-  - index.md
-  - contact.md
-  - resume.md
+minima:
+  # date_format: "%b %-d, %Y" # uncomment to customize the date format
+  skin: "classic" # change to 'dark', 'solarized', etc. if you have the skin files
+  social_links:
+    linkedin: miles-c-johnson # Replace with your Twitter username
+    github: milescjohnson # Replace with your GitHub username
+    # You can add more social links here, e.g. linkedin: yourusername
+
+  header_pages:
+    - index.md
+    - contact.md
+    - resume.md
 
 # Defaults
 defaults:
