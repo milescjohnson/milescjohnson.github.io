@@ -5,13 +5,13 @@ baseurl: "" # leave empty for user/organization pages
 
 # Author info
 author:
-  name: Miles Johnson
-  email: m.milesjohnson@gmail.com
-  github: milescjohnson
-  linkedin: miles-c-johnson
+  - Miles Johnson <m.milesjohnson@gmail.com>
+ # email: m.milesjohnson@gmail.com
+ # github: milescjohnson
+ # linkedin: miles-c-johnson
   
 # Theme
-theme: jekyll-theme-minimal
+theme: jekyll-theme-minima
 
 # Build settings
 markdown: kramdown
