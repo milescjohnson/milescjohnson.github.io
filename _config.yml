@@ -1,0 +1,157 @@
+# site configuration
+
+theme: jekyll-theme-chirpy
+
+lang: en
+
+# https://kevinnovak.github.io/Time-Zone-Picker
+timezone: America/New_York
+
+# jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
+
+# main title
+title: Corey Goldberg
+
+# subtitle
+tagline: Blog
+
+# used by seo meta and the atom feed
+description: Blog by Corey Goldberg
+
+# protocol & hostname for your site (it does not end with a '/')
+url: https://cgoldberg.github.io
+
+author:
+  name: Corey Goldberg
+  # sets the `author.url` property. helps Google to disambiguate the correct author of articles
+  url: https://github.com/cgoldberg
+
+github:
+  username: cgoldberg
+
+#twitter:
+#  username: cgoldberg
+
+social:
+  # displayed as the default author of the posts and the copyright owner in the footer
+  name: Corey Goldberg
+  #email: example@domain.com
+  links:
+    # first element serves as the copyright owner's link
+    - https://github.com/cgoldberg
+    - https://www.linkedin.com/in/cgoldberg
+
+webmaster_verifications:
+  google: U9-hCLAR44wY-5vEZSfl8iVgClFj5L0nuUgP8pdl2xo
+
+# end of `jekyll-seo-tag` settings
+
+# web analytics settings
+analytics:
+  google:
+    id: G-VDZPG2HGL4
+
+# color scheme setting
+# note: empty will follow the system prefer color by default,
+# and there will be a toggle to switch the theme between dark
+# and light on the bottom left of the sidebar.
+# available options: light, dark
+theme_mode: dark
+
+# avatar on sidebar (supports local or CORS resources)
+avatar: /assets/img/corey_goldberg.jpg
+
+# global switch for TOC in posts (boolean)
+toc: false
+
+#comments:
+  # global switch for the post-comment system
+  #provider: disqus
+  #disqus:
+  #  shortname: cgoldberg
+
+# self-hosted static assets (optional) › https://github.com/cotes2020/chirpy-static-assets
+assets:
+  self_host:
+    enabled: false # boolean, empty means false
+    # specify the Jekyll environment, empty means both
+    # only works if `assets.self_host.enabled` is 'true'
+    env: # [development | production]
+
+paginate: 15
+
+# base URL of your site
+baseurl: ""
+
+# ------------ The following options are not recommended to be modified ------------------
+
+kramdown:
+  footnote_backlink: "&#8617;&#xfe0e;"
+  syntax_highlighter: rouge
+  syntax_highlighter_opts: # Rouge Options › https://github.com/jneen/rouge#full-options
+    css_class: highlight
+    # default_lang: console
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
+collections:
+  tabs:
+    output: true
+    sort_by: order
+
+defaults:
+  - scope:
+      path: "" # An empty string here means all files in the project
+      type: posts
+    values:
+      layout: post
+      comments: false # Enable comments in posts.
+      toc: false # Display TOC column in posts.
+      # DO NOT modify the following parameter unless you are confident enough
+      # to update the code of all other post links in this project.
+      permalink: /posts/:title/
+  - scope:
+      path: _drafts
+    values:
+      comments: false
+  - scope:
+      path: ""
+      type: tabs # see `site.collections`
+    values:
+      layout: page
+      permalink: /:title/
+
+sass:
+  style: compressed
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+  ignore:
+    envs: [development]
+
+exclude:
+  - "*.gem"
+  - "*.gemspec"
+  - docs
+  - tools
+  - README.md
+  - LICENSE
+  - purgecss.js
+  - "*.config.js"
+  - "package*.json"
+
+jekyll-archives:
+  enabled: [categories, tags]
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    tag: /tags/:name/
+    category: /categories/:name/
