@@ -68,11 +68,9 @@ Analyze a full article or long-form text.
 
 ```json
 {
-  "title": "Government Announces New Climate Policy",
-  "text": "The administration unveiled sweeping reforms today...",
-  "source": "Example News",
-  "published_at": "2026-01-10T14:30:00Z",
+  "url": "https://examplenews.com/politics/climate-policy",
   "options": {
+    "extract_paywalled": false
     "include_sentence_analysis": true,
     "include_key_phrases": true
   }
@@ -84,6 +82,11 @@ Analyze a full article or long-form text.
 ```json
 {
   "article_id": "art_92kaf8",
+  "story_id": "story_32fez9",
+  "title": "Government Announces New Climate Policy",
+  "text": "The administration unveiled sweeping reforms today...",
+  "source": "Example News",
+  "published_at": "2026-01-10T14:30:00Z",
   "sentiment": {
     "label": "negative",
     "score": -0.42,
