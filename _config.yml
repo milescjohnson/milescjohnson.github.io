@@ -13,7 +13,7 @@ author:
   linkedin: miles-c-johnson
   
 # Theme
-theme: merlot
+theme: jekyll-theme-merlot
 
 # Build settings
 markdown: kramdown
