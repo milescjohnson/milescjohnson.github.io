@@ -11,7 +11,7 @@ author:
  # linkedin: miles-c-johnson
   
 # Theme
-theme: minima
+theme: minimal
 
 # Build settings
 markdown: kramdown
