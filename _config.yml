@@ -15,14 +15,6 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
-minima:
-  # date_format: "%b %-d, %Y" # uncomment to customize the date format
-  skin: "classic" # change to 'dark', 'solarized', etc. if you have the skin files
-  social_links:
-    linkedin: miles-c-johnson # Replace with your Twitter username
-    github: milescjohnson # Replace with your GitHub username
-    # You can add more social links here, e.g. linkedin: yourusername
-
 # Defaults
 defaults:
   - scope:
