@@ -11,7 +11,7 @@ author:
  # linkedin: miles-c-johnson
   
 # Theme
-theme: jekyll-theme-minima
+theme: minima
 
 # Build settings
 markdown: kramdown
