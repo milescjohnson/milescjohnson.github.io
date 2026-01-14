@@ -1,35 +1,19 @@
-# Site settings
-title: Miles Johnson - Technical Writing Portfolio
-url: "https://milescjohnson.github.io"
-baseurl: "" # leave empty for user/organization pages
-  
-# Theme
+title: "Miles Johnson – Technical Writing Portfolio"
 theme: minima
 
-# Build settings
 markdown: kramdown
 highlighter: rouge
 
-# Plugins (GitHub Pages–approved)
 plugins:
-  - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-mermaid
 
-# Defaults
-defaults:
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: post
-  - scope:
-      path: ""
-    values:
-      layout: default
-
-# Exclude from build
-exclude:
-  - README.md
-  - node_modules
-  - Gemfile
-  - Gemfile.lock
+nav:
+  - Home: index.md
+  - About: about.md
+  - Portfolio:
+      - API Reference: portfolio/api-reference/index.md
+      - How-To Guide: portfolio/how-to-guide/index.md
+      - System Design Doc: portfolio/system-design-doc/index.md
+      - Troubleshooting Guide: portfolio/troubleshooting-guide/index.md
+      - Gameplay System Doc: portfolio/gameplay-system-doc/index.md
