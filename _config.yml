@@ -10,36 +10,33 @@ timezone: America/New_York
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 
 # main title
-title: Corey Goldberg
+title: Miles Johnson
 
 # subtitle
-tagline: Blog
+tagline: Technical Writing Portfolio
 
 # used by seo meta and the atom feed
-description: Blog by Corey Goldberg
+description: Techincal Writing Portfolio by Miles Johnson
 
 # protocol & hostname for your site (it does not end with a '/')
-url: https://cgoldberg.github.io
+url: https://milescjohnson.github.io
 
 author:
-  name: Corey Goldberg
+  name: Miles Johnson
   # sets the `author.url` property. helps Google to disambiguate the correct author of articles
-  url: https://github.com/cgoldberg
+  url: https://github.com/milescjohnson
 
 github:
-  username: cgoldberg
-
-#twitter:
-#  username: cgoldberg
+  username: milescjohnson
 
 social:
   # displayed as the default author of the posts and the copyright owner in the footer
   name: Corey Goldberg
-  #email: example@domain.com
+  email: m.milesjohnson@gmail.com
   links:
     # first element serves as the copyright owner's link
-    - https://github.com/cgoldberg
-    - https://www.linkedin.com/in/cgoldberg
+    - https://github.com/milescjohnson
+    - https://www.linkedin.com/in/miles-c-johnson
 
 webmaster_verifications:
   google: U9-hCLAR44wY-5vEZSfl8iVgClFj5L0nuUgP8pdl2xo
@@ -64,13 +61,6 @@ avatar: /assets/img/corey_goldberg.jpg
 # global switch for TOC in posts (boolean)
 toc: false
 
-#comments:
-  # global switch for the post-comment system
-  #provider: disqus
-  #disqus:
-  #  shortname: cgoldberg
-
-# self-hosted static assets (optional) › https://github.com/cotes2020/chirpy-static-assets
 assets:
   self_host:
     enabled: false # boolean, empty means false
