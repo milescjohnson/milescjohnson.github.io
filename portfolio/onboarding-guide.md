@@ -6,27 +6,27 @@ In this guide you will learn how to set up your local environment for developing
 
 ## Setup
 
-*  Birdleaf is organized into a few different GitHub repositories. Create a new directory and clone each of them into it:
-    ```
-      mkdir birdleaf
-    ```
-    ```
-      git clone https://github.com/milescjohnson/birdleaf/birdleaf-auth.git ./birdleaf
-    ```
-    ```
-      git clone https://github.com/milescjohnson/birdleaf/birdleaf-backend.git ./birdleaf
-    ```
-    ```
-      git clone https://github.com/milescjohnson/birdleaf/birdleaf-data.git ./birdleaf
-    ```
+Birdleaf is organized into a few different GitHub repositories. Create a new directory and clone each of them into it:
+```
+  mkdir birdleaf
+```
+```
+  git clone https://github.com/milescjohnson/birdleaf/birdleaf-auth.git ./birdleaf
+```
+```
+  git clone https://github.com/milescjohnson/birdleaf/birdleaf-backend.git ./birdleaf
+```
+```
+  git clone https://github.com/milescjohnson/birdleaf/birdleaf-data.git ./birdleaf
+```
     
-*  Download and install the [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0). You can verify the installation from the command line with:
+Download and install the [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0). You can verify the installation from the command line with:
    
-    ```
-     dotnet --version
-    ```
+```
+ dotnet --version
+```
     
-*  Import the project into the IDE of your choice. For native .NET support, most people use one of these:
+Import the project into the IDE of your choice. For native .NET support, most people use one of these:
     *  [Rider]()
     *  [VS Code]()
     *  [Visual Studio]()
