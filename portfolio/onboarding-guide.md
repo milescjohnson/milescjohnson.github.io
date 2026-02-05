@@ -27,9 +27,10 @@ Download and install the [.NET 7 SDK](https://dotnet.microsoft.com/en-us/downloa
 ```
     
 Import the project into the IDE of your choice. For native .NET support, most people use one of these:
-    *  [Rider]()
-    *  [VS Code]()
-    *  [Visual Studio]()
+
+  *  [Rider]()
+  *  [VS Code]()
+  *  [Visual Studio]()
 
 
 ## Build the App
@@ -56,7 +57,7 @@ This command performs various housekeeping tasks to configure your project for l
 
 ## Run and Test a Service API
 
-Each service relies on various applications like Redis for caching or Postgres for data to function properly. With [Docker containers](https://docs.docker.com/) you can conveniently host all the applications you need locally in a way that is a way that is identical to our Kubernetes pods in production.
+Each service relies on various applications like Redis for caching or Postgres for data to function properly. With [Docker containers](https://docs.docker.com/) you can conveniently host all the applications you need locally in a way that is identical to our Kubernetes pods in production.
 
 [Install Docker](https://docs.docker.com/desktop/)
 
@@ -78,13 +79,14 @@ Now you can try running a service.
   dotnet run <service-name>.Service/<service-name>.Service.csproj
   ```
 
-Your service should now be running locally and listening for requests on `localhost:<port>`. You can find or change the port number in `appsettings.json` in the top level directory of your service. If your service makes requests to APIs is other services, it will by default point to the latest dev images on Kubernetes.
+Your service should now be running locally and listening for requests on `localhost:<port>`. You can find or change the port number in `appsettings.json` in the top level directory of your service. If your service makes requests to APIs in other services, it will by default point to the latest dev images deployed on Kubernetes.
 
 
-##Test the Service API
+## Test the Service API
 
-Birdleaf Services use [gRPC](https://grpc.io/). An easy way to invoke gRPC calls is by used [Postman](). 
-1. Download and open Postman.
+Birdleaf Services use [gRPC](https://grpc.io/). An easy way to invoke gRPC calls is by using [Postman]().
+
+1. Download and open [Postman]().
 2. Click `Workspace > New > gRPC`.
 3. In the URL box, enter the url of your running service (`localhost:<port>`)
 4. Birdleaf services use service reflection, which allows clients like Postman to load a full service definition over RPC.
