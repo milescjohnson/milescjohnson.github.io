@@ -2,7 +2,7 @@
 
 ## Overview
 
-In this tutorial, we will build a reusable, production-quality custom
+In this tutorial, you will build a reusable, production-quality custom
 Viam module for easy integration of unsupported serial sensor components.
 The module:
 
@@ -12,7 +12,7 @@ The module:
     latency
 -   Implements a concrete `PMS5003` particulate matter sensor subclass
 -   Registers and runs locally within the Viam runtime
--   Exposes live sensor data in the Viam app
+-   Exposes live sensor data in the Viam app via the standard Sensor API
 
 ------------------------------------------------------------------------
 
@@ -166,8 +166,8 @@ Instead:
 
 # Implement a concrete model for custom hardware
 
-By inheriting from SerialSensor, all that is required is specialized 
-protocol parsing logic for your device. In this example we will be working
+By inheriting from SerialSensor, all that is required from the subclass is 
+protocol parsing logic specific to the device. In this example we will be working
 with a PMS5003 particulate sensor.
 
 File: `src/models/pms5003_sensor.py`
@@ -214,6 +214,57 @@ class PMS5003(SerialSensor):
             }
 
         return {}
+```
+
+## Testing Without Hardware
+
+Because transport logic (`SerialSensor`) is separated from protocol parsing logic (`parse_logic()`) 
+you can test parsing using a simulated serial stream.
+Instead of connecting to a real serial.Serial device:
+
+1. Create a mock object that behaves like a serial port
+2. Feed it known-good PMS5003 frame bytes
+3. Verify that parse_logic() returns the expected dictionary
+
+This keeps tests deterministic, fast, hardware-independent, and CI-friendly
+
+You can simulate serial.Serial with a minimal class:
+
+```python
+class FakeSerial:
+    def __init__(self, data: bytes):
+        self._buffer = data
+
+    def read(self, n: int) -> bytes:
+        chunk = self._buffer[:n]
+        self._buffer = self._buffer[n:]
+        return chunk
+```
+
+And then, using the PMS5003 output format outlined above, create a simple unit test
+
+```python
+from models.pms5003_sensor import PMS5003
+import struct
+
+def test_pms5003_parsing():
+    # Create known test values
+    values = [0] * 15
+    values[3] = 12
+    values[4] = 25
+    values[5] = 40
+
+    payload = struct.pack('>HHHHHHHHHHHHHHH', *values)
+    frame = b'\x42\x4d' + payload
+
+    fake_serial = FakeSerial(frame)
+
+    sensor = PMS5003("test")
+    result = sensor.parse_logic(fake_serial)
+
+    assert result["pm1_0"] == 12
+    assert result["pm2_5"] == 25
+    assert result["pm10"] == 40
 ```
 
 ------------------------------------------------------------------------
@@ -304,5 +355,9 @@ No changes to the transport layer required.
 
 ------------------------------------------------------------------------
 
-This architecture provides a robust, scalable foundation for integrating
-unsupported hardware into the Viam ecosystem.
+# Key Takeaways
+
+-   Viam modules cleanly separate hardware logic from application logic
+-   Serial transport can be abstracted once and reused
+-   Background polling ensures deterministic RPC performance
+-   The model system allows clean extensibility
