@@ -1,7 +1,7 @@
 # Create a Custom USB Serial Sensor with Viam Module
 
 This tutorial demonstrates how to build, abstract, and register a custom sensor module for unsupported USB serial devices.
-By the end of this guide, you'll have a clean and extensible module for a variety of USB, serial, or modbus sensors with an example model specifically for the [PMS5003 particulate sensor](https://www.aqmd.gov/docs/default-source/aq-spec/resources-page/plantower-pms5003-manual_v2-3.pdf) that can be registered and queried with a Viam robot runtime.
+By the end of this guide, you'll have a clean and extensible module for a variety of USB, serial, or modbus devices with an example model specifically for the [PMS5003 particulate sensor](https://www.aqmd.gov/docs/default-source/aq-spec/resources-page/plantower-pms5003-manual_v2-3.pdf) that can be registered and queried with a Viam robot runtime.
 
 ---
 
@@ -42,9 +42,9 @@ usb-serial-sensor
 
 ## Implement the custom component
 
-Custom components need to implement one of Viam's standardized component APIs. In this case, you'll need to implement the [Sensor API](https://docs.viam.com/dev/reference/apis/components/sensor/). Most notably, you will need to add logic to `GetReadings` to read serialized data from the device, parse that data, and format the response. Parsing and formatting logic is specific and variable from one device to another, but a lot of boilerplate code for dealing with USB serials can be generalized by making `SerialSensor` an abstract base class. SerialSensor will not be registered but will make implementing different models and managing their dependencies much cleaner and easier.
+Custom components need to implement one of Viam's standardized component APIs. In this case, you'll need to implement the [Sensor API](https://docs.viam.com/dev/reference/apis/components/sensor/). Most notably, you will need to add logic to `GetReadings` to read serial data from the device, parse that data, and format the response. Parsing and formatting logic is specific and variable from one device to another, but a lot of boilerplate code for dealing with USB serials can be generalized by making `SerialSensor` an abstract base class. SerialSensor will not be registered itself but will make implementing different models and managing their dependencies much cleaner and easier.
 
-The `SerialSensor` class handles the highlevel process of initializing serial port access and managing configs. It also spins up a background poller that repeatedly polls the serial connection for data ensuring get_readings is non-blocking with deterministic latency. This means that any models for specific hardware only need to worry about implementing `parse_logic`
+The `SerialSensor` class handles the highlevel process of initializing serial port access and managing configs. It also spins up a background thread that repeatedly polls the serial connection for data ensuring `get_readings` is non-blocking with deterministic latency. This means that any models for specific hardware only need to worry about implementing `parse_logic`.
 
 **serial_sensor.py**
 
@@ -129,7 +129,7 @@ from .serial_sensor import SerialSensor
 
 class PMS5003(SerialSensor):
     # This identifies your specific sensor model in the Viam Registry
-    MODEL = Model(ModelFamily("my-org", "air-quality"), "pms5003")
+    MODEL = Model(ModelFamily("my-org", "usb-sensor"), "pms5003")
 
     @classmethod
     def new(cls, config: Any, dependencies: Mapping[ResourceName, ResourceBase]) -> Self:
@@ -163,19 +163,19 @@ Add python package dependencies to requirements.txt
 
 ```
 {
-  "module_id": "your-org-name:air-quality-sensors",
+  "module_id": "your-org-name:usb-sensors",
   "visibility": "private",
   "models": [
     {
       "api": "rdk:component:sensor",
-      "model": "your-org-name:air-quality-sensors:pms5003"
+      "model": "your-org-name:usb-sensors:pms5003"
     }
   ],
   "entrypoint": "python3 src/main.py"
 }
 ```
 
-List all models the module is capable of handling. Note: Do not include SerialSensor in here, it is not a model.
+List all models the module is capable of handling. Note: Do not include SerialSensor in here.
 
 ---
 
