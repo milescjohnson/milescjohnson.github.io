@@ -416,9 +416,9 @@ No changes to the transport layer required.
 
 ## Robust Connection Handling
 
--   Serial connections are notoriously fickle. If a cable is jiggled or there’s a momentary power dip, the serial port may "ghost" the OS.
+-   Serial connections are notoriously fickle. If a cable is jiggled or there’s a momentary power dip, the serial port may stop communicating with the OS.
 -   Add a connection watchdog in your BaseSerialSensor. If parse_data fails X times in a row, the base class should attempt to close the port, wait 5 seconds, and re-initialize the connection automatically.
--   This is ensures your robot doesn't require a manual restart just because a USB cable was loose for a split second.
+-   This is ensures your robot doesn't require a manual restart just because a USB cable was loose for a second.
 
 ## Support for "Passive Mode"
 
