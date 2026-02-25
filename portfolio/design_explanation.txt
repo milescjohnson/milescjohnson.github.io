@@ -1,0 +1,16 @@
+Instructional Design Explanation
+
+This tutorial is written for intermediate developers—specifically backend or robotics engineers who are comfortable with Python but may be new to robotics middleware or Viam’s module architecture. The primary objective is not just to demonstrate how to integrate a serial device, but to teach the architectural pattern behind extending Viam with unsupported hardware.
+It was designed to teach implementing a new custom module from end-to-end in a single document, while trying to avoid unneccesarrily regurgitating information containg elsewhere in the docs.
+
+I structured the tutorial in three progressive layers:
+
+*   Conceptual framing — I begin by defining architectural goals (separation of concerns, non-blocking RPC behavior, extensibility). This ensures readers understand why the design choices matter before implementing code.
+
+*   Reusable abstraction — I introduce a generic SerialSensor base class first. This emphasizes transport/protocol separation and prevents readers from building one-off integrations. It also mirrors how production robotics systems are typically structured.
+
+*   Concrete example — The PMS5003 implementation demonstrates how to implement protocol parsing while leveraging the base class. This reinforces the extensibility model.
+
+I intentionally included lifecycle explanations (reconfigure()), background threading rationale, and a hardware-free testing section to elevate the tutorial and demonstrate how modules behave in real robotics deployments and how to maintain reliability, testability, and safe hot-reload behavior.
+
+The tutorial avoids over-explaining Python fundamentals and instead focuses on system boundaries: configuration flow, module registration, runtime lifecycle, and failure considerations. The goal is to empower developers not only to integrate one sensor, but to internalize a repeatable pattern for integrating entire classes of serial devices into the Viam ecosystem.
