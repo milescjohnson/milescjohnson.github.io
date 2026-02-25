@@ -30,7 +30,7 @@ The module:
 
 Generate the module scaffold:
 
-    viam module generate --language python --model-name usb-serial-sensor       --name serial_sensor --resource-subtype=sensor
+    viam module generate --language python --model-name usb-serial-sensor --name serial_sensor --resource-subtype=sensor
 
 Your project structure:
 
