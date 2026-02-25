@@ -65,14 +65,14 @@ Install:
 
 # Implement the Generic SerialSensor Base Class
 
-Create an abstract base class `SerialSensor`. `SerialSensor` is not a function model on its own,
+Create an abstract base class `SerialSensor`. `SerialSensor` is not a functional model on its own,
 but organizing our module this way has several advantages:
 
 -   Code reuse: transport logic is the same accross all serial devices, now it lives in one place
--   Extensibility: Adding new serial sensors is trivial. Just create a new subclass of `SerialSensor` and implement `parse_data()` and for that sensor
--   Dependency management: This module uses the `pyserial` for connecting to packages. If you need to update to a new version, you can do that in one place
+-   Extensibility: Adding new serial sensors is trivial. Just create a new subclass of `SerialSensor` and implement `parse_data()` for that sensor
+-   Dependency management: This module uses the `pyserial` package for connecting to packages. If you need to update to a new version, you can do that in one place
 -   Organization: Having a single module for all `Sensor` sub-types that use a serial connection is clean
--   Flexibility: If you want to support different a different transport protocol in the future, you can do so with minimal changes to sensor logic
+-   Flexibility: If you want to support a different transport protocol in the future, you can do so with minimal changes to sensor logic
 
 File: `src/models/serial_sensor.py`
 
