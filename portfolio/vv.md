@@ -1,4 +1,4 @@
-# Building a Production-Ready Custom Serial Sensor Module with Viam
+# Building a Custom Serial Sensor Module with Viam
 
 ## Overview
 
@@ -143,7 +143,7 @@ class SerialSensor(Sensor, ABC):
     def _poll_loop(self):
         while self._running:
             try:
-                parsed = self.parse_logic(self._serial)
+                parsed = self.parse_data(self._serial)
                 if parsed:
                     with self._lock:
                         self._latest_readings = parsed
@@ -308,7 +308,7 @@ def test_pms5003_parsing():
     fake_serial = FakeSerial(frame)
 
     sensor = PMS5003("test")
-    result = sensor.parse_logic(fake_serial)
+    result = sensor.parse_data(fake_serial)
 
     assert result["pm1_0"] == 12
     assert result["pm2_5"] == 25
@@ -417,7 +417,7 @@ No changes to the transport layer required.
 ## Robust Connection Handling
 
 -   Serial connections are notoriously fickle. If a cable is jiggled or there’s a momentary power dip, the serial port may "ghost" the OS.
--   Add a connection watchdog in your BaseSerialSensor. If parse_logic fails X times in a row, the base class should attempt to close the port, wait 5 seconds, and re-initialize the connection automatically.
+-   Add a connection watchdog in your BaseSerialSensor. If parse_data fails X times in a row, the base class should attempt to close the port, wait 5 seconds, and re-initialize the connection automatically.
 -   This is ensures your robot doesn't require a manual restart just because a USB cable was loose for a split second.
 
 ## Support for "Passive Mode"
