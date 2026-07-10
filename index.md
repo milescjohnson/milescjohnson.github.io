@@ -4,6 +4,12 @@ Over the course of 10 years as a backend engineer I have written, and read, a lo
 
 Here are a few sample projects to demonstrate documentation style and skills:  
 
+## Viam Tutorial
+
+As a writing exercise, I created a tutorial for the Robotics platform [Viam](https://docs.viam.com/what-is-viam/). I wanted to demonstrate my ability to learn new technology in an unfamiliar industry and identify blind spots in existing documentation.
+
+- [Custom Serial Sensor Components in Viam](portfolio/viam-tutorial)
+
 ## 1047 Games
 
 Shortly after I joined 1047 Games, they announced internally that we would begin working on a sequel to their flagship game. I was part of a handful of engineers tasked with breaking ground on a brand new backend platform for the new game. In additon to developing the foundational systems and services of the new backend, we were responsible for writing knowledgebase articles, design documents, and API references for everything we built. While these documents are not publicly available, I have created a few samples to represent the kinds of documents I would write for internal engineering teams.
